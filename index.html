@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MedGuard - Secure Health Records</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.5/web3.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>MedGuard</h1>
+      <p>Secure & Decentralized Electronic Health Records</p>
+    </header>
+
+    <div class="container">
+      <section class="upload-section">
+        <h2>Upload Medical Record</h2>
+        <input type="text" id="enter data" placeholder="Enter IPFS Hash" />
+        <button onclick="uploadRecord()">Upload</button>
+      </section>
+
+      <section class="access-section">
+        <h2>Manage Access</h2>
+        <input
+          type="text"
+          id="doctorAddress"
+          placeholder="Doctor's Wallet Address"
+        />
+        <button onclick="grantAccess()">Grant Access</button>
+        <button onclick="revokeAccess()">Revoke Access</button>
+      </section>
+
+      <section class="view-section">
+        <h2>View Medical Record</h2>
+        <input
+          type="text"
+          id="patientAddress"
+          placeholder="Patient's Wallet Address"
+        />
+        <input type="text" id="recordId" placeholder="Record ID" />
+        <button onclick="viewRecord()">Get Record</button>
+        <p><strong>Record Data:</strong> <span id="recordData"></span></p>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
